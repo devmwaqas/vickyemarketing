@@ -1,0 +1,132 @@
+body {
+      background: linear-gradient(99deg, rgba(69,85,255,0.4457983877144608) 0%, rgba(3,223,254,0.6698880235688025) 43%);
+    }
+
+    .pic_modal {
+      display: none;
+      position: fixed;
+      z-index: 100000000;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgb(0,0,0);
+      background-color: rgba(0,0,0,0.9);
+    }
+
+    .pic_modal-content {
+      margin: auto;
+      display: block;
+      height:80%;
+      width:auto;
+      max-height:500px;
+      max-width: 700px;
+    }
+
+    #caption {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 700px;
+      text-align: center;
+      color: #ccc;
+      padding: 10px 0;
+      height: 150px;
+    }
+
+    .pic_modal-content, #caption {
+      -webkit-animation-name: zoom;
+      -webkit-animation-duration: 0.6s;
+      animation-name: zoom;
+      animation-duration: 0.6s;
+    }
+
+    @-webkit-keyframes zoom {
+      from {-webkit-transform:scale(0)}
+      to {-webkit-transform:scale(1)}
+    }
+
+    @keyframes zoom {
+      from {transform:scale(0)}
+      to {transform:scale(1)}
+    }
+
+    .pic_close {
+      position: absolute;
+      top: 80px;
+      right: 55px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .pic_close:hover,
+    .pic_close:focus {
+      color: #bbb;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    #logo {
+      width: 350px;
+    }
+
+    @media only screen and (max-width: 700px){
+      .pic_modal-content {
+        width: 100%;
+      }
+    }
+
+    @media only screen and (max-width: 470px){
+      #logo {
+        width: 250px;
+      }
+    }
+
+    @media only screen and (max-width: 365px){
+      #logo {
+        width: 205px;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+
+    .form-inline .form-control {
+      width: 100%;
+    }
+
+    .form-inline {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+    }
+
+    .form-inline label {
+      margin: 5px 10px 5px 0;
+    }
+
+    .form-inline input, .form-inline select {
+      vertical-align: middle;
+      margin: 5px 10px 5px 0;
+      background-color: #fff;
+      border: 1px solid #ddd;
+    }
+
+
+
+    @media (max-width: 1201px) {
+      .form-inline input, .form-inline select {
+        margin: 10px 0;
+      }
+
+      .form-inline {
+        flex-direction: column;
+        align-items: stretch;
+      }
+    }
